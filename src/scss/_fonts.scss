@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'TTHoves Regular';
+
+  src: url('~@/assets/fonts/TTHoves-Regular.woff2') format('woff2'),
+    url('~@/assets/fonts/TTHoves-Regular.woff') format('woff'),
+    url('~@/assets/fonts/TTHoves-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTHoves Medium';
+
+  src: url('~@/assets/fonts/TTHoves-Medium.woff2') format('woff2'),
+    url('~@/assets/fonts/TTHoves-Medium.woff') format('woff'),
+    url('~@/assets/fonts/TTHoves-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTHoves DemiBold';
+
+  src: url('~@/assets/fonts/TTHoves-DemiBold.woff2') format('woff2'),
+    url('~@/assets/fonts/TTHoves-DemiBold.woff') format('woff'),
+    url('~@/assets/fonts/TTHoves-DemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$TTHRegular: 'TTHoves Regular', sans-serif;
+$TTHMedium: 'TTHoves Medium', sans-serif;
+$TTHDemiBold: 'TTHoves DemiBold', sans-serif;
