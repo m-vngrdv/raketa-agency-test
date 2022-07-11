@@ -58,8 +58,7 @@ export default {}
 <style lang="scss" scoped>
 .nav {
   position: relative;
-  height: 100vh;
-  min-height: 500px;
+  min-height: 100vh;
   max-width: 120px;
 
   text-align: center;
