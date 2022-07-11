@@ -44,7 +44,7 @@
       </li>
     </ul>
 
-    <button class="nav__logout">
+    <button class="nav__logout" @click="logout">
       Выход
       <img src="@/assets/icons/logout.svg" alt="Иконка выхода" class="nav__logout-icon" />
     </button>
@@ -52,7 +52,13 @@
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions(['logout']),
+  },
+}
 </script>
 
 <style lang="scss" scoped>

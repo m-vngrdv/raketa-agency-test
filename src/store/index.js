@@ -67,7 +67,7 @@ const actions = {
           isPhoneModerated: false,
           isEmailModerated: false,
         })
-      }, 2000)
+      }, 1000)
     }).then(response => {
       commit('SET_USER', response)
     })
@@ -76,7 +76,7 @@ const actions = {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve()
-      }, 2000)
+      }, 1000)
     }).then(() => {
       commit('UPDATE_USER', payload)
     })
@@ -85,17 +85,27 @@ const actions = {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve()
-      }, 2000)
+      }, 1000)
     })
   },
   updateUserContact({ commit }, payload) {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve()
-      }, 2000)
+      }, 1000)
     }).then(() => {
       commit('UPDATE_USER_CONTACT', payload)
     })
+  },
+  logout() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('Success')
+        reject('Error')
+      }, 1000)
+    })
+      .then(response => alert(response))
+      .catch(error => alert(error))
   },
 }
 
