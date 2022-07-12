@@ -1,2 +1,14 @@
 $columns: 12;
 $columns-gap: '10px';
+
+$breakpoints: (
+  'sm': (
+    max-width: 480px,
+  ),
+  'md': (
+    max-width: 960px,
+  ),
+  'lg': (
+    max-width: 1440px,
+  ),
+) !default;

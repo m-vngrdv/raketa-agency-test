@@ -74,5 +74,14 @@ export default {
       background-color: $cold-gray;
     }
   }
+  @include respond-to('md') {
+    padding: 10px;
+    width: 100%;
+  }
+
+  @include respond-to('sm') {
+    padding: 10px;
+    width: 100%;
+  }
 }
 </style>

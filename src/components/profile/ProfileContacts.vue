@@ -2,7 +2,7 @@
   <section class="section">
     <h2 class="section-title section-title--contacts">Контактные данные</h2>
     <div class="r-row">
-      <div class="r-col r-col-6">
+      <div class="r-col r-col-xl-6 r-col-md-6 r-col-sm-12">
         <r-input
           label="Номер телефона"
           @focus="restoreContacts"
@@ -10,7 +10,7 @@
           v-model="userCopy.phone"
         ></r-input>
       </div>
-      <div class="r-col r-col-6">
+      <div class="r-col r-col-xl-6 r-col-md-6 r-col-sm-12">
         <r-input
           label="Email"
           @focus="restoreContacts"
@@ -21,15 +21,15 @@
     </div>
 
     <div v-if="isUserPhoneChanged || isUserEmailChanged" class="section__footer r-row">
-      <div class="r-col">
+      <div class="section__col-btn-reset r-col r-col-md-2 r-col-sm-12">
         <r-button @click="restoreContacts" outlined>отменить</r-button>
       </div>
 
-      <div class="r-col">
+      <div class="section__col-btn-confirm r-col r-col-md-4 r-col-sm-12">
         <r-button @click="changeContact">сохранить изменения</r-button>
       </div>
 
-      <div class="r-col r-col-4">{{ message }}</div>
+      <div class="r-col r-col-xl-4 r-col-md-4 r-col-sm-12">{{ message }}</div>
     </div>
   </section>
 </template>

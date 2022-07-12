@@ -10,6 +10,14 @@ body {
   font-size: 56px;
   line-height: 60px;
   text-transform: uppercase;
+  @include respond-to('md') {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  @include respond-to('sm') {
+    margin-bottom: 30px;
+  }
 }
 
 .section-title {
@@ -18,6 +26,11 @@ body {
   font-size: 46px;
   line-height: 40px;
   letter-spacing: -1px;
+  @include respond-to('sm') {
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .r-row {
@@ -25,7 +38,9 @@ body {
   flex-wrap: wrap;
   margin: -10px;
   @for $i from 1 through $columns {
-    @include cols($i);
+    @each $breakpointName, $breakpointMedia in $breakpoints {
+      @include cols($i, $breakpointName);
+    }
   }
 }
 
@@ -43,5 +58,18 @@ body {
   }
   &__footer {
     margin-top: 33px;
+    @include respond-to('sm') {
+      display: flex;
+    }
+  }
+  &__col-btn-reset {
+    @include respond-to('sm') {
+      order: 2;
+    }
+  }
+  &__col-btn-confirm {
+    @include respond-to('sm') {
+      order: 1;
+    }
   }
 }

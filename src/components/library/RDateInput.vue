@@ -107,7 +107,7 @@ export default {
     display: inline-block;
     margin-bottom: 10px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 23px;
   }
 
   &__content {
@@ -138,14 +138,34 @@ export default {
     }
     &--day {
       flex-grow: 1;
+      width: 100%;
+      @include respond-to('md') {
+        flex: 0 0 100px;
+      }
+      @include respond-to('sm') {
+        flex: 0 0 33.33%;
+      }
     }
 
     &--month {
       flex: 0 0 200px;
+      @include respond-to('md') {
+        flex: 1 0 auto;
+      }
+      @include respond-to('sm') {
+        flex: 0 0 33.33%;
+      }
     }
 
     &--year {
       flex-grow: 1;
+      width: 100%;
+      @include respond-to('md') {
+        flex: 0 0 100px;
+      }
+      @include respond-to('sm') {
+        flex: 0 0 33.33%;
+      }
     }
   }
 

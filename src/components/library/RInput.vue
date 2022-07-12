@@ -113,6 +113,8 @@ export default {
   }
 
   &__head {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__label {
@@ -127,6 +129,10 @@ export default {
   }
 
   &__messsage {
+    font-size: 14.2px;
+    line-height: 20px;
+
+    color: $green;
   }
 
   &__show-pwd {

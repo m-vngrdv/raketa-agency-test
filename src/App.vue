@@ -23,11 +23,22 @@ export default {
 <style lang="scss">
 .content {
   display: flex;
+  @include respond-to('md') {
+    flex-direction: column;
+  }
 }
 
 .container {
   width: 100%;
   max-width: 900px;
-  padding: 40px 68px;
+  padding: 40px 68px 60px;
+  @include respond-to('md') {
+    max-width: 920px;
+    padding: 40px 20px 60px;
+  }
+  @include respond-to('sm') {
+    max-width: 100%;
+    padding: 20px 15px;
+  }
 }
 </style>

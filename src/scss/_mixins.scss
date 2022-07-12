@@ -1,5 +1,15 @@
-@mixin cols($cols) {
-  .r-col-#{$cols} {
-    flex: 0 0 calc(((#{$cols}/#{$columns}) * 100%) - (10px * 2));
+@mixin cols($cols, $breakpointName) {
+  .r-col-#{$breakpointName}-#{$cols} {
+    @include respond-to($breakpointName) {
+      flex: 0 0 calc(((#{$cols}/#{$columns}) * 100%) - (10px * 2));
+    }
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
   }
 }

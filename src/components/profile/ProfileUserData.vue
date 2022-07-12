@@ -1,29 +1,29 @@
 <template>
   <section class="section">
     <div class="r-row">
-      <div class="r-col r-col-6">
+      <div class="r-col r-col-xl-6 r-col-md-6 r-col-sm-12">
         <r-input label="Фамилия" placeholder="Введите данные" v-model="userCopy.firstName"></r-input>
       </div>
 
-      <div class="r-col r-col-6">
+      <div class="r-col r-col-xl-6 r-col-md-6 r-col-sm-12">
         <r-input label="Имя" placeholder="Введите данные" v-model="userCopy.lastName"></r-input>
       </div>
 
-      <div class="r-col r-col-6">
+      <div class="r-col r-col-xl-6 r-col-md-6 r-col-sm-12">
         <r-input label="Отчество" placeholder="Введите данные" v-model="userCopy.patronymic"></r-input>
       </div>
 
-      <div class="r-col r-col-6">
+      <div class="r-col r-col-xl-6 r-col-md-6 r-col-sm-12">
         <r-date-input label="Дата рождения" v-model="userCopy.bday"></r-date-input>
       </div>
     </div>
 
     <div v-if="isUserDataChange" class="section__footer r-row">
-      <div class="r-col">
+      <div class="section__col-btn-reset r-col r-col-md-2 r-col-sm-12">
         <r-button @click="restoreUserData" outlined>отменить</r-button>
       </div>
 
-      <div class="r-col">
+      <div class="section__col-btn-confirm r-col r-col-md-4 r-col-sm-12">
         <r-button :disabled="disabledUserDataButton" @click="updateUserData">сохранить изменения</r-button>
       </div>
     </div>
